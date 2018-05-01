@@ -6,7 +6,7 @@
 <body>
 <?php
 $x = 4
-echo "X == $x";
+echo "<p>X == $x</p>";
 ?>
 </body>
 </html>
