@@ -7,6 +7,16 @@
         <link rel="icon" href="rims.png"/>
     </head>
     <body>
+        <div class="assignlist">
+            <ul>
+                <li><a href="assign1">Future assignment</a></li>
+                <li><a href="assign2">Future assignment</a></li>
+                <li><a href="assign3">Future assignment</a></li>
+                <li><a href="assign4">Future assignment</a></li>
+                <li><a href="assign5">Future assignment</a></li>
+                <li><a href="assign6">Future assignment</a></li>
+            </ul>
+        </div>
         <!--attempt to guess users birthday-->
         <?php
         $month = mt_rand(1,12);
