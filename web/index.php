@@ -31,6 +31,7 @@
         } else {
             $day = mt_rand(1, 30);
         }
+        echo "<h3>Where you born on $month / $day / $year ?</h3>"
         ?> 
     </body>
 </html>
