@@ -3,7 +3,8 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="index.css">
-        <title><img src="rims.png">Home Page</title>
+        <title>Home Page</title>
+        <link rel="icon" href="rims.png"/>
     </head>
     <body>
         <!--attempt to guess users birthday-->
