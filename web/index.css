@@ -5,7 +5,6 @@ title {
 
 ul {
     list-style-type: none;
-    text-align: center;
 }
 
 .assignlist {
@@ -28,4 +27,8 @@ ul:hover {
 
 a:hover {
     color: red;
+}
+
+li {
+    text-align: center;
 }
