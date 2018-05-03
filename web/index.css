@@ -21,3 +21,7 @@ body {
 ul:hover {
     color: red;
 }
+
+a:hover {
+    color: red;
+}
