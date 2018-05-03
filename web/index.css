@@ -14,3 +14,10 @@ ul {
 .bday {
     text-align: center;
 }
+body {
+    background-color: #949494;
+}
+
+ul:hover {
+    text-decoration-color: red;
+}
