@@ -19,5 +19,5 @@ body {
 }
 
 ul:hover {
-    text-decoration-color: red;
+    color: red;
 }
