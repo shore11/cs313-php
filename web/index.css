@@ -11,7 +11,7 @@ ul {
     text-align: center;
     border: black solid;
     border-radius: 15px;
-    margin: 50px 150px 50px 150px;
+    width: content;
 }
 
 .bday {
