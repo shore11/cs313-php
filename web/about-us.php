@@ -8,5 +8,6 @@
         <?php
             require("navbar.php");
         ?>
+        <p>we build really cool planets!!</p>
     </body>
 </html>
