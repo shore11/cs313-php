@@ -9,6 +9,8 @@ ul {
 
 .assignlist {
     text-align: center;
+    border: black solid;
+    border-radius: 15px;
 }
 
 .bday {
