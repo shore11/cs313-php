@@ -92,7 +92,7 @@
             <form method="post" action="add.php" >
                 <p>Price: $9.11</p>
                 <input type="hidden" name="price" value="9.11">
-                <input type="hidden" name="item" value="">
+                <input type="hidden" name="item" value="afro">
                 <input class="sub" type="submit" value="+ Add To Cart">
             </form>
                 </div></div></div>
