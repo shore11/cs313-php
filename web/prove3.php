@@ -10,45 +10,109 @@
     </head>
     <body class="back">
         <header>Every thing you need to be ready for the disco!</header>
+        <div class="container">
         <!-- row 1 -->
-        <div class="row"><div class="col-md-4"><div class="col-md-12">
-                    hello
+        <div class="row"><div class="col-lg-4"><div class="col-lg-12">
+            hello Moto
+            <p>asdfsaf You wher</p>
+            <p>as you where</p>
+        <!-- BUTTON -->
+            <form method="post" action="add.php" >
+                <input type="hidden" name="item" value"">
+                <input class="sub" type="submit" value="+ Add To Cart">
+            </form>
                 </div></div>
-            <div class="col-md-4"><div class="col-md-12">
+            <div class="col-lg-4"><div class="col-lg-12">
                     hello
+        <!-- BUTTON -->
+            <form method="post" action="add.php" >
+                <input type="hidden" name="item" value"">
+                <input class="sub" type="submit" value="+ Add To Cart">
+            </form>
                 </div></div>
-            <div class="col-md-4"><div class="col-md-12">
+            <div class="col-lg-4"><div class="col-lg-12">
                     hello
+        <!-- BUTTON -->
+            <form method="post" action="add.php" >
+                <input type="hidden" name="item" value"">
+                <input class="sub" type="submit" value="+ Add To Cart">
+            </form>
                 </div></div></div>
     <!-- row 2 -->
-        <div class="row"><div class="col-md-4"><div class="col-md-12">
+        <div class="row"><div class="col-lg-4"><div class="col-lg-12">
                     hello
+        <!-- BUTTON -->
+            <form method="post" action="add.php" >
+                <input type="hidden" name="item" value"">
+                <input class="sub" type="submit" value="+ Add To Cart">
+            </form>
                 </div></div>
-            <div class="col-md-4"><div class="col-md-12">
+            <div class="col-lg-4"><div class="col-lg-12">
                     hello
+        <!-- BUTTON -->
+            <form method="post" action="add.php" >
+                <input type="hidden" name="item" value"">
+                <input class="sub" type="submit" value="+ Add To Cart">
+            </form>
                 </div></div>
-            <div class="col-md-4"><div class="col-md-12">
+            <div class="col-lg-4"><div class="col-lg-12">
                     hello
+         <!-- BUTTON -->
+            <form method="post" action="add.php" >
+                <input type="hidden" name="item" value"">
+                <input class="sub" type="submit" value="+ Add To Cart">
+            </form>        
                 </div></div></div>
         <!-- row 3 -->
-        <div class="row"><div class="col-md-4"><div class="col-md-12">
+        <div class="row"><div class="col-lg-4"><div class="col-lg-12">
                     hello
+        <!-- BUTTON -->
+            <form method="post" action="add.php" >
+                <input type="hidden" name="item" value"">
+                <input class="sub" type="submit" value="+ Add To Cart">
+            </form>
                 </div></div>
-            <div class="col-md-4"><div class="col-md-12">
+            <div class="col-lg-4"><div class="col-lg-12">
                     hello
+        <!-- BUTTON -->
+            <form method="post" action="add.php" >
+                <input type="hidden" name="item" value"">
+                <input class="sub" type="submit" value="+ Add To Cart">
+            </form>
                 </div></div>
-            <div class="col-md-4"><div class="col-md-12">
+            <div class="col-lg-4"><div class="col-lg-12">
                     hello
+        <!-- BUTTON -->
+            <form method="post" action="add.php" >
+                <input type="hidden" name="item" value"">
+                <input class="sub" type="submit" value="+ Add To Cart">
+            </form>
                 </div></div></div>
          <!-- row 4 -->
-        <div class="row"><div class="col-md-4"><div class="col-md-12">
+        <div class="row"><div class="col-lg-4"><div class="col-lg-12">
                     hello
+        <!-- BUTTON -->
+            <form method="post" action="add.php" >
+                <input type="hidden" name="item" value"">
+                <input class="sub" type="submit" value="+ Add To Cart">
+            </form>
                 </div></div>
-            <div class="col-md-4"><div class="col-md-12">
+            <div class="col-lg-4"><div class="col-lg-12">
                     hello
+         <!-- BUTTON -->
+            <form method="post" action="add.php" >
+                <input type="hidden" name="item" value"">
+                <input class="sub" type="submit" value="+ Add To Cart">
+            </form>
                 </div></div>
-            <div class="col-md-4"><div class="col-md-12">
+            <div class="col-lg-4"><div class="col-lg-12">
                     hello
+         <!-- BUTTON -->
+            <form method="post" action="add.php" >
+                <input type="hidden" name="item" value"">
+                <input class="sub" type="submit" value="+ Add To Cart">
+            </form>
                 </div></div></div>
+        </div>
     </body>
 </html>
