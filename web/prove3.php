@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 
 <html>
@@ -84,35 +87,26 @@
                     hello
         <!-- BUTTON -->
             <form method="post" action="add.php" >
-                <input type="hidden" name="item" value"">
+                <p>Price: $9.11</p>
+                <input type="hidden" name="price" value="9.11">
+                <input type="hidden" name="item" value="">
                 <input class="sub" type="submit" value="+ Add To Cart">
             </form>
                 </div></div></div>
-         <!-- row 4 -->
-        <div class="row"><div class="col-lg-4"><div class="col-lg-12">
-                    hello
-        <!-- BUTTON -->
-            <form method="post" action="add.php" >
-                <input type="hidden" name="item" value"">
-                <input class="sub" type="submit" value="+ Add To Cart">
+     <!-- row 4 -->
+            <div class="row"><div class="col-lg-5"><div class="col-lg-12">
+                <!-- BUTTON -->
+            <form method="post" action="" >
+                <input class="sub" type="submit" value="See Cart">
             </form>
                 </div></div>
-            <div class="col-lg-4"><div class="col-lg-12">
-                    hello
-         <!-- BUTTON -->
-            <form method="post" action="add.php" >
-                <input type="hidden" name="item" value"">
-                <input class="sub" type="submit" value="+ Add To Cart">
+                <div class="col-lg-5"><div class="col-lg-12">
+                <!-- BUTTON -->
+            <form method="post" action="" >
+                <input class="sub" type="submit" value="Check out">
             </form>
                 </div></div>
-            <div class="col-lg-4"><div class="col-lg-12">
-                    hello
-         <!-- BUTTON -->
-            <form method="post" action="add.php" >
-                <input type="hidden" name="item" value"">
-                <input class="sub" type="submit" value="+ Add To Cart">
-            </form>
-                </div></div></div>
+            </div>
         </div>
     </body>
 </html>
