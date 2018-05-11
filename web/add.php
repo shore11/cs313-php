@@ -7,8 +7,8 @@
     $price = $_POST['price'];
 
     // a bag has an item and its price
-    //$bag = array($item, $price);
-    array_push($_SESSION['cart'],$_POST['item'],$_POST['price']);
+    $bag = array($item, $price);
+    array_push($_SESSION['cart'],$_POST['item'],$bag);
 
     echo $item;
     echo $price;
