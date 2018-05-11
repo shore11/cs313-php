@@ -1,8 +1,7 @@
 <?php
     session_start();
     // cart has many bags
-    $cart = array();
-    $_SESSION["cart"] = $cart;
+    $_SESSION["cart"] = array();
 ?>
 <!DOCTYPE html>
 
