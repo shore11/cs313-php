@@ -6,6 +6,7 @@
 <html>
     <body>
         <p><?php
+            var_dump($_SESSION['cart']);
             print_r($_SESSION['cart']);
             ?></p>
     </body>
