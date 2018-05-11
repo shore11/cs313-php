@@ -11,6 +11,9 @@
                     echo $item ;
                 }
             }
+            else{
+                echo "what the";
+            }
             ?></p>
     </body>
 </html>
