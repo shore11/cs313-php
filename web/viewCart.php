@@ -7,7 +7,7 @@
     <body>
         <p><?php
             foreach($_SESSION["cart"] as $item)
-            echo $item[0]. "what you got" ;
+            echo $item . "what you got" ;
             ?></p>
     </body>
 </html>

@@ -4,8 +4,8 @@
     $price = $_POST["price"];
 
     // a bag has an item and its price
-    $bag = array($item, $price);
-    array_push($_SESSION["cart"], $bag);
+    //$bag = array($item, $price);
+    array_push($_SESSION["cart"], $item, $price);
 
     echo '<script>window.location.href="prove3.php";</script>';
     exit();
