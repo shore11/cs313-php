@@ -1,5 +1,8 @@
 <?php
-session_start();
+    session_start();
+    // cart has many bags
+    $cart = array();
+    $_SESSION["cart"] = $cart;
 ?>
 <!DOCTYPE html>
 
@@ -96,7 +99,7 @@ session_start();
      <!-- row 4 -->
             <div class="row"><div class="col-lg-5"><div class="col-lg-12">
                 <!-- BUTTON -->
-            <form method="post" action="" >
+            <form method="post" action="viewCart.php" >
                 <input class="sub" type="submit" value="See Cart">
             </form>
                 </div></div>
