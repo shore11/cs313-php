@@ -13,6 +13,6 @@
     echo $item;
     echo $price;
     var_dump($_SESSION['cart']);
-    //echo '<script>window.location.href="prove3.php";</script>';
+    echo '<script>window.location.href="prove3.php";</script>';
    // exit();
 ?>
