@@ -8,5 +8,5 @@
     array_push($_SESSION["cart"], $item, $price);
 
     echo '<script>window.location.href="prove3.php";</script>';
-    exit();
+   // exit();
 ?>

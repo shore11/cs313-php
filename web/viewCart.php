@@ -6,13 +6,7 @@
 <html>
     <body>
         <p><?php
-            if(isset($_SESSION['cart'])){
-                foreach($_SESSION["cart"] as $item){
-                    echo $item ;
-                }
-            }else{
-                echo "what the";
-            }
+            print_r($_SESSION['cart']);
             ?></p>
     </body>
 </html>
