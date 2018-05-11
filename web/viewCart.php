@@ -10,8 +10,7 @@
                 foreach($_SESSION["cart"] as $item){
                     echo $item ;
                 }
-            }
-            else{
+            }else{
                 echo "what the";
             }
             ?></p>
