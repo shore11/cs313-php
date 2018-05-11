@@ -8,11 +8,9 @@
 
     // a bag has an item and its price
     $bag = array($item, $price);
+    // cart has many bags
     array_push($_SESSION['cart'],$bag);
 
-    echo $item;
-    echo $price;
-    var_dump($_SESSION['cart']);
     echo '<script>window.location.href="prove3.php";</script>';
    // exit();
 ?>

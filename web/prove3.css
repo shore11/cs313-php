@@ -51,3 +51,14 @@ form {
 .col-lg-5 {
     padding-left: 30px;
 }
+
+.bviewcart {
+    min-height: 100%;
+    background-color: aliceblue;
+    
+}
+
+.box {
+      margin-left: 250px;
+    margin-right: 250px;
+}

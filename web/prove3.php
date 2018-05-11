@@ -1,7 +1,5 @@
 <?php
-    session_start();
-    // cart has many bags
-  
+    session_start();  
 ?>
 <!DOCTYPE html>
 
