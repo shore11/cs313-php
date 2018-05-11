@@ -6,8 +6,10 @@
 <html>
     <body>
         <p><?php
-            foreach($_SESSION["cart"] as $item){
-                echo $item . "what you got" ;
+            if(isset($_SESSION['cart'])){
+                foreach($_SESSION["cart"] as $item){
+                    echo $item ;
+                }
             }
             ?></p>
     </body>
