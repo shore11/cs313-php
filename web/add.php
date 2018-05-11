@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     $item = $_POST["item"];
     $price = $_POST["price"];
 
