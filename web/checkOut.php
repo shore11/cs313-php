@@ -23,7 +23,7 @@
                 <label for="streetAddress">Street Address: </label>
                 <input class="form-control" type="text" name="streetAddress"><br>
                 <ul class="list-group">
-                    <li class="list-group-item">Total Amount Due:<span class="badge"><?php echo $_SESSION['total']; ?></span> </li>
+                    <li class="list-group-item">Total Amount Due:<span class="badge">$<?php echo $_SESSION['total']; ?></span> </li>
                 </ul>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
