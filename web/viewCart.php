@@ -19,7 +19,7 @@
                 $index = 0;
                 foreach($_SESSION['cart'] as $bag){
                  echo '<form method="post" action="remove.php">
-                    <li class="list-group-item">'.$bag[0].'<input type="hidden" name="index" value="$index"><span class="badge">'.$bag[1].'</span> <span class="badge"><button type="submit" class="btn btn-danger btn-xs"> Click To Remove </button></span></li>
+                    <li class="list-group-item">'.$bag[0].'<input type="hidden" name="index" value="'.$index.'"><span class="badge">'.$bag[1].'</span> <span class="badge"><button type="submit" class="btn btn-danger btn-xs"> Click To Remove </button></span></li>
                   </form>';
                 $index++;
                 }
