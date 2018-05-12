@@ -15,6 +15,7 @@
     <body class="bviewcart">
         <div class="box">
         <ul class="list-group">
+            <!-- loop through cart and dsiplay contents each in own line -->
             <?php
                 $index = 0;
                 foreach($_SESSION['cart'] as $bag){
@@ -24,12 +25,14 @@
                 $index++;
                 }
             ?>
+            <!-- sum the current values in the cart -->
             <li class="list-group-item" >Total Amount Due:<span class="badge">$
                 <?php
                     $sum = 0;
                     foreach($_SESSION['cart'] as $total){
                       $sum += $total[1];
                     }
+                    $_SESSION['total'] = $sum;
                     echo $sum;
                 ?>
                 </span></li>

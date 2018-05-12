@@ -62,3 +62,10 @@ form {
       margin-left: 350px;
     margin-right: 350px;
 }
+
+.form-group {
+    padding-left: 200px;
+    padding-right: 300px;
+    padding-top: 50px;
+        
+}
