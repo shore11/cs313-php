@@ -19,14 +19,20 @@
                 $index = 0;
                 foreach($_SESSION['cart'] as $bag){
                  echo '<form method="post" action="remove.php">
-                    <li class="list-group-item">'.$bag[0].'<input type="hidden" name="index" value="'.$index.'"><span class="badge">'.$bag[1].'</span> <span class="badge"><button type="submit" class="btn btn-danger btn-xs"> Click To Remove </button></span></li>
+                    <li class="list-group-item">'.$bag[0].'<input type="hidden" name="index" value="'.$index.'"><span class="badge">$'.$bag[1].'</span> <span class="badge"><button type="submit" class="btn btn-danger btn-xs"> Click To Remove </button></span></li>
                   </form>';
                 $index++;
                 }
             ?>
-            <form method="post" action="remove.php">
-            <li class="list-group-item">$bag[0]<input type="hidden" name="index" value="$index"><span class="badge">$bag[1]</span> <span class="badge"><button type="submit" class="btn btn-danger btn-xs"> Click To Remove </button></span></li>
-            </form>
+            <li class="list-group-item" >Total Amount Due:<span class="badge">$
+                <?php
+                    $sum = 0;
+                    foreach($_SESSION['cart'] as $total){
+                      $sum += $total[1];
+                    }
+                    echo $sum;
+                ?>
+                </span></li>
         </ul>
         </div>
         <div class="container">
@@ -39,7 +45,7 @@
                 </div></div>
                 <div class="col-lg-5"><div class="col-lg-12">
                 <!-- BUTTON -->
-            <form method="post" action="" >
+            <form method="post" action="checkOut.php" >
                 <input class="sub" type="submit" value="Check out">
             </form>
                 </div></div>

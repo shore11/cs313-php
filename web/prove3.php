@@ -102,7 +102,7 @@
                 </div></div>
                 <div class="col-lg-5"><div class="col-lg-12">
                 <!-- BUTTON -->
-            <form method="post" action="" >
+            <form method="post" action="checkOut.php" >
                 <input class="sub" type="submit" value="Check out">
             </form>
                 </div></div>
