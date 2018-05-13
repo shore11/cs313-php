@@ -22,6 +22,13 @@
             ?>
             <li class="list-group-item">Total Amount Paid:<span class="badge">$<?php echo $_SESSION['total']; ?></span></li>
         </ul>
+            <ul class="list-group" >
+                <li class="list-group-item">
+                    <?php 
+echo "Being Shipped to: " . $_POST['name'] . "</br>" . $_POST['streetAddress'] . "</br>" . $_POST['city'] . ", " $_POST['stat'];
+                    ?>
+                </li>
+            </ul>
         </div>
     </body>
 </html>
