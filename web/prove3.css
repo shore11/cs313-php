@@ -73,3 +73,7 @@ form {
 .titlebar {
 
 }
+
+.contain {
+    padding: 40px 300px 300px 0px;
+}
