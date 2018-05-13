@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="form-group">
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER['confirm.php']?>">
+            <form method="post" action="confirm.php">
                 <label for="name">Full Name:</label>
                 <input class="form-control" type="text" name="name">
                 <label for="city">City: </label>

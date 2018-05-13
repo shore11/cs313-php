@@ -25,7 +25,7 @@
             <ul class="list-group" >
                 <li class="list-group-item">
                     <?php 
-echo "Being Shipped to: " . $_POST['name'] . "</br>" . $_POST['streetAddress'] . "</br>" . $_POST['city'] . ", " . $_POST['state'];
+echo "Being Shipped to: " . htmlspecialchars($_POST['name']) . "</br>" . htmlspecialchars($_POST['streetAddress']) . "</br>" . htmlspecialchars($_POST['city']) . ", " . htmlspecialchars($_POST['state']);
                     ?>
                 </li>
             </ul>
