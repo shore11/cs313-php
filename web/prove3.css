@@ -23,7 +23,7 @@ header {
 
 
 html {
-    height: 100%;
+    min-height: 100%;
 }
 
 .sub:hover {
@@ -76,4 +76,10 @@ form {
 
 .contain {
     padding: 40px 300px 0px 300px;
+}
+
+.picture {
+    height: 250px;
+    width: inherit;
+    border-radius: 30px;
 }
