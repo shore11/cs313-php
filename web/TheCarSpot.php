@@ -121,7 +121,7 @@
             echo "</div>";
             echo "</div><br>";
             //reset count back to what it was
-            --$countContainer;
+            $countContainer--;
         }
         $countContainer++;
     }
