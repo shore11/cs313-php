@@ -120,6 +120,8 @@
         if ($countContainer % 3 == 2 || ++$countContainer == $rowCount){
             echo "</div>";
             echo "</div><br>";
+            //reset count back to what it was
+            --$countContainer;
         }
         $countContainer++;
     }
