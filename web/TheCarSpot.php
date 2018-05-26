@@ -93,7 +93,7 @@
     $query = "SELECT vh.make, vh.model, vh.year FROM vechicle";
     $stmt = $db->prepare($query);
     $stmt->execute();
-    foreach($stmt->fetchALL(PDO::FETCH_ASSOC) as $car){
+    foreach($uery as $car){
         $make = $car["make"];
         $model = $car["model"];
         $year = $car["year"];
