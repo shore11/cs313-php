@@ -91,15 +91,34 @@
 <!-- PHP WILL GENERATE THE CONTAINERS -->
 <?php
     $search ="Nissan";
-    $query = "SELECT vh.make, vh.model, vh.year FROM vehicle vh WHERE vh.make =:search";
+    $query = "SELECT vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.make = :search";
     $stmt = $db->prepare($query);
     $stmt->bindValue(":search", $search, PDO::PARAM_STR);
     $stmt->execute();
+    $countContainer = 0;
     foreach($stmt->fetchALL(PDO::FETCH_ASSOC) as $car){
         $make = $car["make"];
         $model = $car["model"];
         $year = $car["year"];
-        echo "<h4>$make $model $year</h4>";
+        $price = $car["price"];
+        if ($countContainer % 3 == 0){
+            echo "<div class='container'>";
+            echo "<div class='row'";
+        }
+        echo "<div class='col-sm-4'>";
+        echo "<div class='panel panel-primary'>";
+        echo "<div class='panel-heading'>$make $model $year<span style='float: right' >'$'$price</span></div>";
+        echo "<div class='panel-body'><img src='dart.jpg' class='img-responsive' style='width:100%' alt='Image'></div>";    
+        echo "<div class='panel-footer'><a href='#'>More info -></a></div>";
+        echo "</div>";
+        echo "</div>";
+            echo "<h4>$make $model $year</h4>";
+        
+        if ($countContainer % 3 = 2){
+            echo "</div>";
+            echo "</div><br>";
+        }
+        $countContainer++;
     }
 ?>
 <div class="container">    
