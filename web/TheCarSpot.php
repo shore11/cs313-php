@@ -113,7 +113,7 @@
         echo "<div class='panel panel-primary'>";
         echo "<div class='panel-heading'>$make $model $year<span style='float: right' >$ $price</span></div>";
         echo "<div class='panel-body'><img src='dart.jpg' class='img-responsive' style='width:100%' alt='Image'></div>";    
-        echo "<div class='panel-footer'><a href='#'>More info -></a></div>";
+        echo "<div class='panel-footer'><a href='moreInfo.php'>More info -></a></div>";
         echo "</div>";
         echo "</div>";
         
