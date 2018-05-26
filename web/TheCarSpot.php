@@ -120,6 +120,9 @@
         if ($countContainer % 3 == 2){
             echo "</div>";
             echo "</div><br>";
+        } elseif (++$countContainer == $rowCount){
+            echo "</div>";
+            echo "</div><br>";
         }
         $countContainer++;
     }
