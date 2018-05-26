@@ -90,7 +90,7 @@
 </nav>
 <!-- PHP WILL GENERATE THE CONTAINERS -->
 <?php
-    $search ="";
+    $search ="Maxima";
     $query = "SELECT vh.make, vh.model, vh.year FROM vechicle WHERE vh.make =:search";
     $stmt = $db->prepare($query);
     $stmt->bindValue(":search", $search, PDO::PARAM_STR);
@@ -99,7 +99,7 @@
         $make = $car["make"];
         $model = $car["model"];
         $year = $car["year"];
-        echo "<h4>$make $model, $year</h4>";
+        echo "<h4>$make $model $year</h4>";
     }
 ?>
 <div class="container">    
