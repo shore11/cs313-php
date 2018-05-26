@@ -1,3 +1,20 @@
+<!-- Connect to databse -->
+<?php
+    $dbUrl = getenv('DATABASE_URL');
+    $dbopts = parse_url($dbUrl);
+
+    $dbHost = $dbopts["host"];
+    $dbPort = $dbopts["port"];
+    $dbUser = $dbopts["user"];
+    $dbPassword = $dbopts["pass"];
+    $dbName = ltrim($dbopts["path"],'/');
+
+    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,22 +89,16 @@
   </div>
 </nav>
 <!-- PHP WILL GENERATE THE CONTAINERS -->
-<!-- Connect to databse -->
 <?php
-    $dbUrl = getenv('DATABASE_URL');
-    $dbopts = parse_url($dbUrl);
-
-    $dbHost = $dbopts["host"];
-    $dbPort = $dbopts["port"];
-    $dbUser = $dbopts["user"];
-    $dbPassword = $dbopts["pass"];
-    $dbName = ltrim($dbopts["path"],'/');
-
-    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-
+    $query = "SELECT vh.make, vh.model, vh.year FROM vechicle";
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+    foreach($stmt->fetchALL(PDO::FETCH_ASSOC) as $car){
+        $make = $car["make"];
+        $model = $car["model"];
+        $year = $car["year"];
+        echo "<h4>$make $model, $year</h4>"
+    }
 ?>
 <div class="container">    
   <div class="row">
