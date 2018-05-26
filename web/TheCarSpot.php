@@ -131,7 +131,7 @@
         $countContainer++;
     }
 ?>
-
+    </div></div><br>
 <footer class="container-fluid text-center">
   <p>Online Store Copyright</p>  
   <form class="form-inline">Get deals:
