@@ -107,12 +107,11 @@
         }
         echo "<div class='col-sm-4'>";
         echo "<div class='panel panel-primary'>";
-        echo "<div class='panel-heading'>$make $model $year<span style='float: right' >'$'$price</span></div>";
+        echo "<div class='panel-heading'>$make $model $year<span style='float: right' >$ $price</span></div>";
         echo "<div class='panel-body'><img src='dart.jpg' class='img-responsive' style='width:100%' alt='Image'></div>";    
         echo "<div class='panel-footer'><a href='#'>More info -></a></div>";
         echo "</div>";
         echo "</div>";
-            echo "<h4>$make $model $year</h4>";
         
         if ($countContainer % 3 == 2){
             echo "</div>";
