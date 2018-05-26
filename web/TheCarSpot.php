@@ -90,7 +90,7 @@
 </nav>
 <!-- PHP WILL GENERATE THE CONTAINERS -->
 <?php
-    $search ="Maxima";
+    $search ="Nissan";
     $query = "SELECT vh.make, vh.model, vh.year FROM vechicle WHERE vh.make =:search";
     $stmt = $db->prepare($query);
     $stmt->bindValue(":search", $search, PDO::PARAM_STR);
