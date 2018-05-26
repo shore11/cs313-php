@@ -117,11 +117,9 @@
         echo "</div>";
         echo "</div>";
         
-        if ($countContainer % 3 == 2 || ++$countContainer == $rowCount){
+        if ($countContainer % 3 == 2){
             echo "</div>";
             echo "</div><br>";
-            //reset count back to what it was
-            $countContainer--;
         }
         $countContainer++;
     }
