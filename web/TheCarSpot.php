@@ -90,7 +90,7 @@
 </nav>
 <!-- PHP WILL GENERATE THE CONTAINERS -->
 <?php
-    $search ="Nissan";
+    $search =$_GET["makes"];
     $query = "SELECT vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.make = :search";
     $stmt = $db->prepare($query);
     $stmt->bindValue(":search", $search, PDO::PARAM_STR);
@@ -108,21 +108,21 @@
         
         
         if($countContaier != ($rowCount - 1)){
-        if ($countContainer % 3 == 0){
-            echo "<div class='container'>";
-            echo "<div class='row'>";
-        }
-        echo "<div class='col-sm-4'>";
-        echo "<div class='panel panel-primary'>";
-        echo "<div class='panel-heading'>$make $model $year<span style='float: right' >$ $price</span></div>";
-        echo "<div class='panel-body'><img src='dart.jpg' class='img-responsive' style='width:100%' alt='Image'></div>";    
-        echo "<div class='panel-footer'><a href='moreInfo.php'>More info -></a></div>";
-        echo "</div>";
-        echo "</div>";
-        
-        if ($countContainer % 3 == 2){
+            if ($countContainer % 3 == 0){
+                echo "<div class='container'>";
+                echo "<div class='row'>";
+            }
+            echo "<div class='col-sm-4'>";
+            echo "<div class='panel panel-primary'>";
+            echo "<div class='panel-heading'>$make $model $year<span style='float: right' >$ $price</span></div>";
+            echo "<div class='panel-body'><img src='dart.jpg' class='img-responsive' style='width:100%' alt='Image'></div>";    
+            echo "<div class='panel-footer'><a href='moreInfo.php'>More info -></a></div>";
             echo "</div>";
-            echo "</div><br>";
+            echo "</div>";
+        
+            if ($countContainer % 3 == 2){
+                echo "</div>";
+                echo "</div><br>";
         }
         } else {
             echo "</div>";
