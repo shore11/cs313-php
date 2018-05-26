@@ -90,7 +90,7 @@
 </nav>
 <!-- PHP WILL GENERATE THE CONTAINERS -->
 <?php
-    $search =$_GET["makes"];
+    $search =$_GET["make"];
     $query = "SELECT vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.make = :search";
     $stmt = $db->prepare($query);
     $stmt->bindValue(":search", $search, PDO::PARAM_STR);
