@@ -95,6 +95,10 @@
     $stmt = $db->prepare($query);
     $stmt->bindValue(":search", $search, PDO::PARAM_STR);
     $stmt->execute();
+    
+    //In case we reach our last row to display proper div tags
+    $getRows = pg_query($db, $query);
+    $rowCount = pg_num_rows($getRows);
     $countContainer = 0;
     foreach($stmt->fetchALL(PDO::FETCH_ASSOC) as $car){
         $make = $car["make"];
@@ -113,7 +117,7 @@
         echo "</div>";
         echo "</div>";
         
-        if ($countContainer % 3 == 2){
+        if ($countContainer % 3 == 2 || ($countContainer + 1) == $rowCount){
             echo "</div>";
             echo "</div><br>";
         }

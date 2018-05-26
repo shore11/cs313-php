@@ -32,6 +32,8 @@ VALUES ('Aaron', 'Shore', '208 432 0444', 'email@eamil.com'),
 ('Andrew', 'Shore', '208 432 7744', 'email1@eamil.com'),
 ('Travis', 'Shore', '248 422 0654', 'email2@eamil.com');
 
+INSERT INTO vendor (first_name, last_name, phone_number, email)
+VALUES ('Zach', 'Newell', '448 432 0444', 'email3@eamil.com');
 // Add a car for aaron
 INSERT INTO vehicle (make, model, year, price, info, vendor_id)
 VALUES('Nissan', 'Maxima', 2002, 4500, 'In great condition',
@@ -47,6 +49,10 @@ VALUES('Nissan', 'Maxima', 2002, 4500, 'In great condition',
     VALUES('Nissan', '300z', 2001, 6500, 'Super Fast car',
       (SELECT v.vendor_id FROM vendor v WHERE email = 'email2@eamil.com'));
 
+      // Add a car for zach
+      INSERT INTO vehicle (make, model, year, price, info, vendor_id)
+      VALUES('Nissan', 'Sentra', 1998, 2000, 'Super Fast car',
+        (SELECT v.vendor_id FROM vendor v WHERE email = 'email3@eamil.com'));
 
 // add locations
 INSERT INTO location(state, city, vehicle_id)
