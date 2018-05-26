@@ -103,7 +103,7 @@
         $price = $car["price"];
         if ($countContainer % 3 == 0){
             echo "<div class='container'>";
-            echo "<div class='row'";
+            echo "<div class='row'>";
         }
         echo "<div class='col-sm-4'>";
         echo "<div class='panel panel-primary'>";
@@ -114,7 +114,7 @@
         echo "</div>";
             echo "<h4>$make $model $year</h4>";
         
-        if ($countContainer % 3 = 2){
+        if ($countContainer % 3 == 2){
             echo "</div>";
             echo "</div><br>";
         }
