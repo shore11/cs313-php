@@ -90,8 +90,10 @@
 </nav>
 <!-- PHP WILL GENERATE THE CONTAINERS -->
 <?php
-    $query = "SELECT vh.make, vh.model, vh.year FROM vechicle";
+    $search ="";
+    $query = "SELECT vh.make, vh.model, vh.year FROM vechicle WHERE vh.make =:search";
     $stmt = $db->prepare($query);
+    $stmt->bindValue(":search", $search, PDO::PARAM_STR);
     $stmt->execute();
     foreach($stmt->fetchALL(PDO::FETCH_ASSOC) as $car){
         $make = $car["make"];
