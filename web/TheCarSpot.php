@@ -105,6 +105,9 @@
         $model = $car["model"];
         $year = $car["year"];
         $price = $car["price"];
+        
+        
+        if($countContaier != ($rowCount - 1)){
         if ($countContainer % 3 == 0){
             echo "<div class='container'>";
             echo "<div class='row'>";
@@ -120,9 +123,10 @@
         if ($countContainer % 3 == 2){
             echo "</div>";
             echo "</div><br>";
-        } elseif (++$countContainer == $rowCount){
+        }
+        } else {
             echo "</div>";
-            echo "</div><br>";
+            echo "</div><br>"; 
         }
         $countContainer++;
     }
