@@ -69,7 +69,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
                                                         <!-- BUTTON TO POST A NEW CAR -->
-          <button class="btn btn-danger" style="margin-top: 10px"><li><a href="postCar.php">Post Car for Sale</a></li></button>
+          <button class="btn btn-danger" style="margin-top: 10px"><li><a href="postCar.html">Post Car for Sale</a></li></button>
       </ul>
       <ul class="nav navbar-nav navbar-right">          <!-- SEARCH BAR -->
           <form action="" method="get" class="searchform">
