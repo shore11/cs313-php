@@ -28,12 +28,12 @@
     // add the vehicle to db
     if (isset($_POST["make"]) && isset($_POST["model"]) && isset($_POST["year"]) && isset($_POST["price"]) && isset($_POST["desc"])){
         $sql = 'INSERT INTO vehicle(make,model,year,price,info,vendor_id) VALUES(:make,:model,:year,:price,:info,:id)';
-        $stmt = db->prepare($sql);
+        $stmt = $db->prepare($sql);
         $stmt->bindValue(":make", $_POST["make"], PDO::PARAM_STR);
         $stmt->bindValue(":model", $_POST["model"], PDO::PARAM_STR);
         $stmt->bindValue(":year", $_POST["year"], PDO::PARAM_INT);
         $stmt->bindValue(":price", $_POST["price"], PDO::PARAM_INT);
-        $stmt->bindValue(":info", $_POST["info"], PDO::PARAM_STR);
+        $stmt->bindValue(":info", $_POST["desc"], PDO::PARAM_STR);
         $stmt->bindValue(":id", $lastID, PDO::PARAM_INT);
         $stmt->execute();
         $lastID = $db->lastInsertId();
@@ -42,7 +42,7 @@
      // add location of the vehicle to db
     if (isset($_POST["city"]) && isset($_POST["state"])){
         $sql = 'INSERT INTO location(state,city,vehicle_id) VALUES(:state,:city,:id)';
-        $stmt = db->prepare($sql);
+        $stmt = $db->prepare($sql);
         $stmt->bindValue(":state", $_POST["state"], PDO::PARAM_STR);
         $stmt->bindValue(":city", $_POST["city"], PDO::PARAM_STR);
         $stmt->bindValue(":id", $lastID, PDO::PARAM_INT);
