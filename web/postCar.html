@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body style="background-color: darkgrey">
+        <h2 style="text-align: center">Please fill out this form to post your car.</h2>
+        <div class="container" style="padding: 0px 200px">
+        <form method="post" action="/actionPostCar.php">
+            <div class="form-group">
+                <label for="fname">First Name:</label>
+                <input type="text" class="form-control" name="fname">
+              </div>
+            <div class="form-group">
+                <label for="lname">Last Name:</label>
+                <input type="text" class="form-control" name="lname">
+              </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" class="form-control" name="phone">
+              </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" name="email">
+              </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" class="form-control" name="city">
+              </div>      
+            <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" class="form-control" name="state">
+              </div>
+              <div class="form-group">
+                <label for="make">Make of the Car:</label>
+                <input type="text" class="form-control" name="make">
+              </div>
+              <div class="form-group">
+                <label for="model">Model of the Car:</label>
+                <input type="text" class="form-control" name="model">
+              </div>
+              <div class="form-group">
+                <label for="year">Year of the Car:</label>
+                <input type="number" class="form-control" name="year">
+              </div>
+            <div class="form-group">
+                <label for="price">Price of the Car:</label>
+                <input type="number" class="form-control" name="price">
+              </div>
+            <div class="form-group">
+                <label for="desc">Description of the Car:</label>
+                <textarea class="form-control" name="desc"></textarea>
+            </div>
+              <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        </div>
+    </body>
+</html>
