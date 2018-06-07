@@ -81,7 +81,6 @@
                                                         <option value="Audi">Audi</option>
                                                         <option value="Dodge">Dodge</option>
                                                     </datalist></li>
-              <li class="search"><label>Model</label><input name="model"></li>
               <li class="search"><label>Year</label><input name="year" ></li>
               <li class="search"><button type="submit"><span class="glyphicon glyphicon-search"></span></button></li></form>
       </ul>                                         <!-- END OF SEARCH BAR -->
@@ -90,12 +89,32 @@
 </nav>
 <!-- PHP WILL GENERATE THE CONTAINERS -->
 <?php
-    $search =$_GET["make"];
-    $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.make = :search";
-    $stmt = $db->prepare($query);
-    $stmt->bindValue(":search", $search, PDO::PARAM_STR);
-    $stmt->execute();
-    
+    // the different ways to do a search for a car
+    if(isset($_GET["make"]) && !isset($_GET["year"])){
+        $search =$_GET["make"];
+        $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.make = :search";
+        $stmt = $db->prepare($query);
+        $stmt->bindValue(":search", $search, PDO::PARAM_STR);
+        $stmt->execute();
+    } elseif ($_GET["year"]) && !isset($_GET["make"])){
+        $search =$_GET["year"];
+        $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.year = :search";
+        $stmt = $db->prepare($query);
+        $stmt->bindValue(":search", $search, PDO::PARAM_INT);
+        $stmt->execute();
+    } elseif ($_GET["year"]) && isset($_GET["make"])){
+        $gyear =$_GET["year"];
+        $gmake = $_GET["make"];
+        $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.year = :gyear AND vh.make = :gmake";
+        $stmt = $db->prepare($query);
+        $stmt->bindValue(":gyear", $gyear, PDO::PARAM_INT);
+        $stmt->bindValue(":gmake", $gyear, PDO::PARAM_STR);
+        $stmt->execute();      
+    } else {
+        $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh";
+        $stmt = $db->prepare($query);
+        $stmt->execute();
+    }
     //In case we reach our last row to display proper div tags
     $getRows = pg_query($db, $query);
     $rowCount = pg_num_rows($getRows);
@@ -136,7 +155,7 @@
     </div></div><br>
 <footer class="container-fluid text-center">
   <p style="color: black" >Online Store Copyright</p>  
- <h2>Thanks for visiting our site!</h2>
+ <h2 style="color: black" >Thanks for visiting our site!</h2>
 </footer>
 
 </body>
