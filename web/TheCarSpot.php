@@ -96,13 +96,13 @@
         $stmt = $db->prepare($query);
         $stmt->bindValue(":search", $search, PDO::PARAM_STR);
         $stmt->execute();
-    } elseif ($_GET["year"]) && !isset($_GET["make"])){
+    } elseif (isset($_GET["year"]) && !isset($_GET["make"])){
         $search =$_GET["year"];
         $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.year = :search";
         $stmt = $db->prepare($query);
         $stmt->bindValue(":search", $search, PDO::PARAM_INT);
         $stmt->execute();
-    } elseif ($_GET["year"]) && isset($_GET["make"])){
+    } elseif (isset($_GET["year"]) && isset($_GET["make"])){
         $gyear =$_GET["year"];
         $gmake = $_GET["make"];
         $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.year = :gyear AND vh.make = :gmake";
