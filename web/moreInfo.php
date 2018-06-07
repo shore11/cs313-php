@@ -35,9 +35,11 @@
                     $result = $stmt->fetch(PDO::FETCH_ASSOC);
                     
                     $fname = $result["first_name"];
-                    $lname = $result["last_name"];                
-                    echo "<div class='col-sm-4'><label>Vendor's Name</label>$fname $lname</div>";
-                    echo "<div class='col-sm-4'><label>Contanct: </label></div>";
+                    $lname = $result["last_name"]; 
+                    $phone = $result["phone_number"];
+                    $email = $result["email"];
+                    echo "<div class='col-sm-4'><label>Vendor's Name: </label>$fname $lname</div>";
+                    echo "<div class='col-sm-4'><label>Contanct: </label><br><label>Phone: </label>$phone<br><label>Email: </label>$email </div>";
                     echo "<div class='col-sm-4'>Name</div>";
                 ?>
             </div>
