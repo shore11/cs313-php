@@ -101,7 +101,7 @@
     $rowCount = pg_num_rows($getRows);
     $countContainer = 0;
     foreach($stmt->fetchALL(PDO::FETCH_ASSOC) as $car){
-        $id = $car["vechicle_id"]
+        $id = $car["vechicle_id"];
         $make = $car["make"];
         $model = $car["model"];
         $year = $car["year"];
