@@ -89,6 +89,7 @@
 </nav>
 <!-- PHP WILL GENERATE THE CONTAINERS -->
 <?php
+    $stmt;
     // the different ways to do a search for a car
     if(!is_null($_GET["make"]) && is_null($_GET["year"])){
         $search =$_GET["make"];
