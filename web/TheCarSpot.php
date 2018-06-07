@@ -91,13 +91,13 @@
 <?php
     $stmt;
     // the different ways to do a search for a car
-    if(!is_null($_GET["make"]) && is_null($_GET["year"])){
+    if(isset($_GET["make"]) && ($_GET["year"] == "")){
         $search =$_GET["make"];
         $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.make = :search";
         $stmt = $db->prepare($query);
         $stmt->bindValue(":search", $search, PDO::PARAM_STR);
         $stmt->execute();
-    } elseif (!is_null($_GET["year"]) && is_null($_GET["make"])){
+    } elseif (isset($_GET["year"]) && ($_GET["make"] == "")){
         $search =$_GET["year"];
         $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.year = :search";
         $stmt = $db->prepare($query);
@@ -111,7 +111,7 @@
         $stmt->bindValue(":gyear", $gyear, PDO::PARAM_INT);
         $stmt->bindValue(":gmake", $gmake, PDO::PARAM_STR);
         $stmt->execute();      
-    } elseif (is_null($_GET["year"]) && is_null($_GET["make"])) {
+    } elseif (($_GET["year"] == "") && ($_GET["make"]) = "") {
         $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh";
         $stmt = $db->prepare($query);
         $stmt->execute();
