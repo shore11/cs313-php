@@ -111,7 +111,7 @@
         $stmt->bindValue(":gyear", $gyear, PDO::PARAM_INT);
         $stmt->bindValue(":gmake", $gmake, PDO::PARAM_STR);
         $stmt->execute();      
-    } elseif (($_GET["year"] == "") && ($_GET["make"]) = "") {
+    } elseif (($_GET["year"] == "") && ($_GET["make"]) == "") {
         $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh";
         $stmt = $db->prepare($query);
         $stmt->execute();
