@@ -93,26 +93,26 @@
     // the different ways to do a search for a car
     if(isset($_GET["make"]) && ($_GET["year"] == "")){
         $search =$_GET["make"];
-        $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.make = :search";
+        $query = "SELECT vh.vendor_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.make = :search";
         $stmt = $db->prepare($query);
         $stmt->bindValue(":search", $search, PDO::PARAM_STR);
         $stmt->execute();
     } elseif (isset($_GET["year"]) && ($_GET["make"] == "")){
         $search =$_GET["year"];
-        $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.year = :search";
+        $query = "SELECT vh.vendor_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.year = :search";
         $stmt = $db->prepare($query);
         $stmt->bindValue(":search", $search, PDO::PARAM_INT);
         $stmt->execute();
     } elseif (isset($_GET["year"]) && isset($_GET["make"])){
         $gyear =$_GET["year"];
         $gmake = $_GET["make"];
-        $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.year = :gyear AND vh.make = :gmake";
+        $query = "SELECT vh.vendor_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.year = :gyear AND vh.make = :gmake";
         $stmt = $db->prepare($query);
         $stmt->bindValue(":gyear", $gyear, PDO::PARAM_INT);
         $stmt->bindValue(":gmake", $gmake, PDO::PARAM_STR);
         $stmt->execute();      
     } elseif (($_GET["year"] == "") && ($_GET["make"]) == "") {
-        $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh";
+        $query = "SELECT vh.vendor_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh";
         $stmt = $db->prepare($query);
         $stmt->execute();
     }
@@ -121,7 +121,7 @@
     $rowCount = pg_num_rows($getRows);
     $countContainer = 0;
     foreach($stmt->fetchALL(PDO::FETCH_ASSOC) as $car){
-        $id = $car["vehicle_id"];
+        $id = $car["vendor_id"];
         $make = $car["make"];
         $model = $car["model"];
         $year = $car["year"];
