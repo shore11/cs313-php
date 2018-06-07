@@ -40,7 +40,14 @@
                     $email = $result["email"];
                     echo "<div class='col-sm-4'><label>Vendor's Name: </label>$fname $lname</div>";
                     echo "<div class='col-sm-4'><label>Contanct: </label><br><label>Phone: </label>$phone<br><label>Email: </label>$email </div>";
-                    echo "<div class='col-sm-4'>Name</div>";
+                    
+                    $query2 = "SELECT vh.info FROM vehicle vh WHERE vh.vendor_id = :id";
+                    $stmt = $db->prepare($query2);
+                    $stmt->bindValue(":id", $search, PDO::PARAM_INT);
+                    $stmt->execute();
+                    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                    $info = $result["info"];
+                    echo "<div class='col-sm-4'><label>Car Description: </label><br><p>$info</p></div>";
                 ?>
             </div>
       </div>
