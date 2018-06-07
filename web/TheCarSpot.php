@@ -90,13 +90,13 @@
 <!-- PHP WILL GENERATE THE CONTAINERS -->
 <?php
     // the different ways to do a search for a car
-    if(isset($_GET["make"]) && !isset($_GET["year"])){
+    if(!is_null($_GET["make"]) && is_null($_GET["year"])){
         $search =$_GET["make"];
         $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.make = :search";
         $stmt = $db->prepare($query);
         $stmt->bindValue(":search", $search, PDO::PARAM_STR);
         $stmt->execute();
-    } elseif (isset($_GET["year"]) && !isset($_GET["make"])){
+    } elseif (!is_null($_GET["year"]) && is_null($_GET["make"])){
         $search =$_GET["year"];
         $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.year = :search";
         $stmt = $db->prepare($query);
