@@ -108,7 +108,7 @@
         $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.year = :gyear AND vh.make = :gmake";
         $stmt = $db->prepare($query);
         $stmt->bindValue(":gyear", $gyear, PDO::PARAM_INT);
-        $stmt->bindValue(":gmake", $gyear, PDO::PARAM_STR);
+        $stmt->bindValue(":gmake", $gmake, PDO::PARAM_STR);
         $stmt->execute();      
     } else {
         $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh";
