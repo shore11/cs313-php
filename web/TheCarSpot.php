@@ -81,7 +81,7 @@
                                                         <option value="Audi">Audi</option>
                                                         <option value="Dodge">Dodge</option>
                                                     </datalist></li>
-              <li class="search"><label>Year</label><input name="year" ></li>
+              <li class="search"><label>Year</label><input type="number" name="year" ></li>
               <li class="search"><button type="submit"><span class="glyphicon glyphicon-search"></span></button></li></form>
       </ul>                                         <!-- END OF SEARCH BAR -->
     </div>
