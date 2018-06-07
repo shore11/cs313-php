@@ -91,7 +91,7 @@
 <!-- PHP WILL GENERATE THE CONTAINERS -->
 <?php
     $search =$_GET["make"];
-    $query = "SELECT vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.make = :search";
+    $query = "SELECT vh.vehicle_id, vh.make, vh.model, vh.year, vh.price FROM vehicle vh WHERE vh.make = :search";
     $stmt = $db->prepare($query);
     $stmt->bindValue(":search", $search, PDO::PARAM_STR);
     $stmt->execute();
@@ -101,6 +101,7 @@
     $rowCount = pg_num_rows($getRows);
     $countContainer = 0;
     foreach($stmt->fetchALL(PDO::FETCH_ASSOC) as $car){
+        $id = $car["vechicle_id"]
         $make = $car["make"];
         $model = $car["model"];
         $year = $car["year"];
@@ -116,7 +117,7 @@
             echo "<div class='panel panel-primary'>";
             echo "<div class='panel-heading'>$make $model $year<span style='float: right' >$ $price</span></div>";
             echo "<div class='panel-body'><img src='dart.jpg' class='img-responsive' style='width:100%' alt='Image'></div>";    
-            echo "<div class='panel-footer'><a href='moreInfo.php'>More info -></a></div>";
+            echo "<div class='panel-footer'><a href='moreInfo.php?id=$id'>More info -></a></div>";
            // <?-- heref   moreInfo.php/id=12234 -->
             echo "</div>";
             echo "</div>";
