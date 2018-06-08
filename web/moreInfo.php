@@ -38,7 +38,7 @@
                     $lname = $result["last_name"]; 
                     $phone = $result["phone_number"];
                     $email = $result["email"];
-                    echo "<div class='col-sm-4'><label>Vendor's Name: </label>$fname $lname</div>";
+                    echo "<div class='col-sm-4'><label>Vendor's Name: </label><br>$fname $lname</div>";
                     echo "<div class='col-sm-4'><label>Contanct: </label><br><label>Phone: </label>$phone<br><label>Email: </label>$email </div>";
                     
                     $query2 = "SELECT vh.info FROM vehicle vh WHERE vh.vendor_id = :id";
